@@ -7,8 +7,20 @@ public class LinkedList {
         this.head=head;
     }
     ///Method add element in linked list
-    public void  add(Node newNode){
+    public void  add(Node newNode){//O(1)
         newNode.next=head;
         head=newNode;
+    }
+
+    public  void  Delete(){ //O(1)
+        head = head.next;
+    }
+
+    public void Display(){
+        Node n= head;
+        while (n != null){
+            System.out.println(n.value);
+            n=n.next;
+        }
     }
 }
